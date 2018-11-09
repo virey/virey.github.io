@@ -1,0 +1,378 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineMax.min.js"></script>
+
+
+
+
+<style>
+
+	
+.travelPath, circle, .dash {
+  display:none;
+}
+.svg-container {
+  width: 400px;
+  height: 400px;
+  background: transparent;
+  position: relative;
+  margin: 0 auto;
+}
+
+
+#theSVG {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+.base-content {
+    margin: 0 auto;
+  
+  font-family: tahoma,arial,sans-serif;
+  font-weight: normal;
+  width: 1180px;
+  margin: 0 auto;
+}
+.buttons-wrapper {
+    pointer-events: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 1180px;
+}
+.buttons-wrapper.--top {
+  width: 700px;
+}
+.point {
+    min-width: 310px;
+  min-height: 120px;
+/*   max-width: 340px; */
+    position: relative;
+        background: transparent;
+    border-color: transparent;
+    color: grey;
+    display: inline-block;
+    padding: 8px 20px;
+  
+    font-size: 1rem;
+    border-radius: 4px;
+   
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .3s all ease;
+}
+.point span{
+   text-transform: uppercase;
+  display: block;
+  padding: 8px 0;
+  font-size: 1.4em;
+  color: white;
+}
+.--bottom .point.--left {
+  width: 470px;
+    margin:0;
+  padding:0;
+}
+.--bottom .point.--right {
+  width: 470px;
+    margin:0;
+  padding:0;
+}
+
+.point.--center span {
+  font-size: 1.8em;
+  width: 200px;
+/*   max-width: 210px; */
+  margin: 0 auto;
+
+}
+
+.center {
+/*     height: 250px;
+    width: 400px; */
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0 auto;
+    justify-content: center;
+    position: relative;
+/*     cursor: pointer; */
+}
+.--top {
+    top: 60px;
+  align-items: flex-end;
+  z-index:20;
+}
+.--top .--center {
+    top: 0px;
+}
+.--bottom {
+    bottom: 150px;
+}
+
+.--bottom .--center {
+    bottom: -100px;
+}
+.--right {
+   text-align: left;
+}
+.--left {
+   text-align: right;
+}
+.bottom-text, .top-text {
+  display:none;
+}
+/* .--left li { direction: rtl; } */
+
+@media screen and (max-width: 1024px) {
+	
+
+.svg-container {
+    width: 300px;
+    height: 300px;
+}
+
+.base-content, .buttons-wrapper {
+    width: 100%;
+}
+
+.point {
+    min-width: 283px;
+}
+
+.buttons-wrapper.--top {
+    width: 80%;
+}
+
+.--right, .--left {
+    width: 30%;
+}
+}
+
+
+</style>
+
+
+
+
+   
+<div class="base-content">
+				<div class="buttons-wrapper --top">
+					<div class="point --left " >
+            <div class= "top-text" >
+              To be the most trusted<br>
+partner in the world<br>
+of custom software!
+<span>Vision</span></div></div>
+<!--           <div class="point"></div> -->
+					<div class="point --right" 
+               ><div class= "top-text" >
+            To exceed our customers expectations<br>
+with innovative and quality solutions<br>
+and services for their business.
+<span>Mission</span></div></div>
+				</div>
+				<div class="center">
+
+
+<div class="svg-container">
+
+  <svg id="theSVG"  wx="0px" y="0px"
+	 viewBox="-130 -300 780 912"  >
+			
+    
+    <circle xmlns="http://www.w3.org/2000/svg" fill="#ffffff" cx="256" cy="450" r="40"/>
+    
+    
+			<line id="line" class="travelPath three-first" x1="256" y1="465" x2="620" y2="208" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    <line id="line2" class="travelPath three-first" x1="256" y1="465" x2="-103" y2="206" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    <circle xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="travelPath two-second" cx="620" cy="208" r="26"/>
+    
+        <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M-127.28684377670288,206.80619192123413 C-127.28684377670288,193.54652341294684 -116.54651228499017,182.80619192123413 -103.28684377670288,182.80619192123413 C-90.02717526841559,182.80619192123413 -79.28684377670288,193.54652341294684 -79.28684377670288,206.80619192123413 C-79.28684377670288,220.06586042952142 -90.02717526841559,230.80619192123413 -103.28684377670288,230.80619192123413 C-116.54651228499017,230.80619192123413 -127.28684377670288,220.06586042952142 -127.28684377670288,206.80619192123413 z" class="two-second travelPath" id="svg_2" data-svg-origin="-103.2868423461914 206.8061981201172" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></path>
+    
+    <line id="line3" class="travelPath two-second" x1="620" y1="208" x2="620" y2="-9" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    <line id="line4" class="travelPath two-second" x1="-103" y1="206" x2="-103" y2="-9" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    
+    <line id="line5" class="travelPath two-th" x1="623" y1="-2" x2="450" y2="-134" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    <line id="line6" class="travelPath two-th" x1="-106" y1="-2" x2="65" y2="-134" style="stroke:rgb(255,255,255);stroke-width:20" />
+
+    
+    <circle xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="two-fo" cx="450" cy="-134" r="26"/>
+    
+        <circle xmlns="http://www.w3.org/2000/svg" fill="#ffffff" class="two-fo" cx="65" cy="-134" r="26"/>
+    
+  
+   <line id="line7" class="travelPath two-forth" x1="450" y1="-134" x2="252" y2="-1" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    <line id="line8" class="travelPath two-forth" x1="65" y1="-141" x2="260" y2="-4" style="stroke:rgb(255,255,255);stroke-width:20" />
+    
+    
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M440.43721269338494,130.43068372986727 L260.31317588599092,-9.080948509648465 " id="svg_24" class="dash"></path>
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M77.64650429077457,129.65548990849413 L260.592246134826,-9.104204117290578 " id="svg_28" class="dash"></path>
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M258.2666646707067,209.50045350992332 L258.2666646707067,-10.654591760036794 " id="svg_20" class="dash"></path>
+  
+<!--   end 3 small lines -->
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M438.88682505063866,129.65548990849413 L624.1581483588094,-9.879397938663686 " id="svg_22" class="dash"></path>
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M79.19689193352082,131.2058775512403 L-103.74884991053057,-6.003428831798175 " id="svg_30" class="dash"></path>
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M437.3364374078925,342.83379078609636 L258.2666646707067,208.72525968855018 " id="svg_8" class="dash"></path>
+ 
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M79.97208575489387,342.0585969647233 L257.4914708493336,208.72525968855018 " id="svg_14" class="dash"></path>
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M438.11163122926564,333.5314649296192 L438.11163122926564,128.880296087121 " id="svg_18" class="dash"></path>
+  
+  <path fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="4" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="butt" stroke-dashoffset="" fill-rule="nonzero" opacity="1" marker-start="" marker-mid="" marker-end="" d="M75.32092282665525,338.1826278578578 L77.64650429077457,128.880296087121 " id="svg_26" class="dash"></path>
+  
+  
+    
+  </svg>
+</div>
+				</div>
+				<div class="buttons-wrapper --bottom">
+					<div class="point --left" >
+            <div class= "bottom-text" ><span>Team</span>Our people — our main values<br>
+We assure that:<br>
+• Only positive Team builds a family spirit<br>
+• We own and shape the future<br>
+• We are always demanding of ourselves<br>
+• Grow our business in a way that makes us proud
+            </div>
+            </div>
+					<div class="point --center" ><span>Values</span></div>
+					<div class= "point --right" >
+            <div class= "bottom-text" >
+					  <span>Trust</span>
+					  Our Clients trust us — We trust our Clients<br>
+and our unbreakable rule of Three:<br>
+• Solution. Customer knows — We can do it.<br>
+• Success. Customer sees — We deliver.<br>
+• Satisfaction. Customer understands — only We<br>
+can provide the wanted results.
+					</div>
+            </div>
+				</div>
+	   </div>
+
+	   <script>
+
+function showAnimation() {
+
+$(function(e) {
+  $( ".travelPath" ).show();
+$( "circle" ).show();
+   $( ".dash" ).show();
+
+   $( ".bottom-text" ).delay( 3000 ).fadeIn( 1800 );
+  $( ".top-text" ).delay( 10200 ).fadeIn( 1800 );
+
+});
+
+$(function(e) {
+  var path = document.querySelectorAll('.three-first');
+ for (var i = 0;  i < path.length; i++) {
+	var length = path[i].getTotalLength();
+
+	$(path[i]).css({
+		'stroke-dasharray': length+1,
+		'stroke-dashoffset': length+1
+	});
+
+	$(path[i]).animate({'stroke-dashoffset': 0}, 3000, mina.bounce);
+  } 
+
+}); 
+
+$(function(e) {
+  
+  var path2 = document.querySelectorAll('.two-second');
+ for (var i = 0;  i < path2.length; i++) {
+	var length = path2[i].getTotalLength();
+
+	$(path2[i]).delay( 2000 ).css({
+		'stroke-dasharray': length+1,
+		'stroke-dashoffset': length+1
+	});
+
+	$(path2[i]).delay( 2000 ).animate({'stroke-dashoffset': 0}, 3000, mina.bounce);
+    } 
+
+}); 
+
+$(function(e) {
+  
+  var path3 = document.querySelectorAll('.two-th');
+ for (var i = 0;  i < path3.length; i++) {
+	var length = path3[i].getTotalLength();
+
+	$(path3[i]).delay( 3300 ).css({
+		'stroke-dasharray': length+1,
+		'stroke-dashoffset': length+1
+	});
+
+	$(path3[i]).delay( 3300 ).animate({'stroke-dashoffset': 0}, 3000, mina.bounce);
+    } 
+
+});
+$(function(e) {
+  
+  var path4 = document.querySelectorAll('.two-forth');
+ for (var i = 0;  i < path4.length; i++) {
+	var length = path4[i].getTotalLength();
+
+	$(path4[i]).delay( 4800 ).css({
+		'stroke-dasharray': length+1,
+		'stroke-dashoffset': length+1
+	});
+
+	$(path4[i]).delay( 4800 ).animate({'stroke-dashoffset': 0}, 3000, mina.bounce);
+    } 
+
+});
+
+
+
+var drawingTimeline = new TimelineMax({repeat:0, yoyo:false});
+
+// Every Dashed Line Draws In
+drawingTimeline.staggerFrom(".first-point", .2, {opacity: 0, scale:0,  transformOrigin:'50% 50%'}, ".02")
+
+
+
+.staggerFrom(".two-second", 0.2,  {opacity: 0, scale:0, delay:3, transformOrigin:'50% 50%'}, ".02")
+
+.staggerFrom(".two-fo", 1.2, {opacity: 0, scale:0, delay:6, transformOrigin:'50% 50%'}, ".02")
+ 
+.staggerFrom(".dash", 2.2, {opacity: 0, delay:2, scale:0, transformOrigin:'50% 50%'}, ".02");
+  
+
+$(window).unbind('scroll.once')
+}
+
+
+
+
+$(window).bind('scroll.once', function(){ 
+   showAnimation(); 
+});
+
+
+</script>
+
